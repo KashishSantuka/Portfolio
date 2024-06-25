@@ -1,0 +1,95 @@
+@import "../../app.scss";
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; // Use the full height of the viewport
+  padding: 20px;
+  background-color: linear-gradient(180deg, #0c0c1d, #111132);
+  // Background color similar to the example
+  color: white; // Text color to contrast with the background
+  flex-direction: column; // Stack content vertically on small screens
+
+  @media (min-width: 768px) {
+    flex-direction: row; // Arrange content side-by-side on larger screens
+    // align-items: center;
+    // justify-content: center;
+    // margin-right:40px;
+  }
+}
+
+.imageContainer {
+  width: 500px; // Adjust size for smaller screens
+  height: 500px; // Adjust size for smaller screens
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rebeccapurple; // Border color similar to the example
+  border-radius: 50%; // Make the container circular
+  overflow: hidden; // Ensure the image fits within the container
+  margin: 20px; // Increased spacing between image and content
+
+  img {
+    width: 100%; // Make the image fill the container
+    height: 100%; // Make the image fill the container
+    object-fit: cover; // Ensure the image covers the container
+    border-radius: 50%; // Make the image itself circular
+  }
+
+  @include mobile{
+    width: 300px; // Adjust size for larger screens
+    height: 300px; // Adjust size for larger screens
+  }
+}
+
+.content {
+  max-width: 90%; // Adjust size for smaller screens
+  text-align: center; // Center text on smaller screens
+  margin-left: 60px;
+
+  @include mobile{
+    align-items: center;
+    margin-top: 0px;
+    margin-right: 40px;
+    
+  }
+
+
+  h1 {
+    font-size: 80px; // Adjust size for smaller screens
+    margin-bottom: 10px;
+
+    @include mobile{
+      font-size: 40px;
+    }
+
+    span {
+      color: rebeccapurple; // Color for the highlighted text
+    }
+  }
+
+  h3 {
+    font-size: 50px; // Adjust size for smaller screens
+    margin-bottom: 20px;
+
+    @include mobile{
+      font-size: 25px;
+    }
+  }
+
+  p {
+    margin-bottom: 40px;
+    line-height: 1.6;
+
+    @include mobile{
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    max-width: 600px; // Adjust size for larger screens
+    text-align: left; // Align text to the left on larger screens
+    margin-right: 200px;
+  }
+}
