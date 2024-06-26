@@ -4,12 +4,13 @@ import { useRef } from "react";
 import taskifyLogo from "../../assets/Taskify.png";
 import QuizLogo from "../../assets/quizphoto.jpg";
 import MovieLogo from "../../assets/MovieLogo.png";
+import UrlImage from "../../assets/UrlLogo.jpg";
 
 const items = [
     {
         id: 1,
         title: "URL Shortner",
-        img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+        img: UrlImage,
         desc: "A URL shortener application was developed using MongoDB, Express, Node.js, and JavaScript. This application allows users to input a valid URL and receive a shortened URL in return. It features a carefully designed model schema that efficiently stores short IDs, original URLs, and visit history. The application dynamically generates shortened URLs and redirects users to the original URLs. Additionally, it tracks and displays the visit history for each shortened URL, allowing for the monitoring of total visits or clicks on each URL.",
         link:"https://github.com/KashishSantuka/url-shortner"
       },
