@@ -7,6 +7,13 @@ import BackEndLogo from "../../assets/BackEndLogo.png";
 
 export default function Service() {
 
+  const uiuxSkills = [
+    { name: "HTML", level: "Experienced" },
+    { name: "CSS", level: "Intermediate" },
+    { name: "JavaScript", level: "Experienced" },
+    {name:'Figma', level: "Intermediate",}
+  ]
+
   const frontendSkills = [
     { name: "HTML", level: "Experienced" },
     { name: "CSS", level: "Intermediate" },
@@ -34,7 +41,7 @@ export default function Service() {
           </p>
         </div>
         <div className="service_group">
-          <Article title="UI/UX" skills={backendSkills} image={BrushLogo}/> 
+          <Article title="UI/UX" skills={uiuxSkills} image={BrushLogo}/> 
           <Article title="Frontend Developer" skills={frontendSkills} image={FrontEndLogo}/>
           <Article title="Backend Developer" skills={backendSkills} image={BackEndLogo}/>
         </div>

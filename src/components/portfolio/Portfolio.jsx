@@ -1,31 +1,38 @@
 import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
+import taskifyLogo from "../../assets/Taskify.png";
+import QuizLogo from "../../assets/quizphoto.jpg";
+import MovieLogo from "../../assets/MovieLogo.png";
 
 const items = [
     {
         id: 1,
-        title: "React Commerce",
+        title: "URL Shortner",
         img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        desc: "A URL shortener application was developed using MongoDB, Express, Node.js, and JavaScript. This application allows users to input a valid URL and receive a shortened URL in return. It features a carefully designed model schema that efficiently stores short IDs, original URLs, and visit history. The application dynamically generates shortened URLs and redirects users to the original URLs. Additionally, it tracks and displays the visit history for each shortened URL, allowing for the monitoring of total visits or clicks on each URL.",
+        link:"https://github.com/KashishSantuka/url-shortner"
       },
       {
         id: 2,
-        title: "Next.js Blog",
-        img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        title: "Brain Buzz",
+        img: QuizLogo,
+        desc: "This React-based quiz app combines dynamic functionality with a responsive CSS design. It features timed questions, shuffled answers, and real-time feedback. Leveraging React Hooks and custom JavaScript, the app ensures efficient state management and smooth performance. With accessibility features and customizable themes, it offers an engaging, inclusive experience across devices.",
+         link:"https://github.com/KashishSantuka/BrainBuzz"
       },
       {
         id: 3,
-        title: "Vanilla JS App",
-        img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        title: "Movie Search",
+        img: MovieLogo,
+        desc: "This web application showcases the top 20 movies ranked by rating. Developed using HTML, CSS, and JavaScript, it features a search functionality allowing users to find movies by name. The app provides a user-friendly interface to explore highly-rated films and quickly locate specific titles within the curated list.",
+       link:"https://github.com/KashishSantuka/search-movies"
       },
       {
         id: 4,
-        title: "Music App",
-        img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        title: "Taskify",
+        img: taskifyLogo,
+        desc: "This ReactJS-based project management application offers robust task and project tracking capabilities. Featuring an intuitive interface built with TailwindCSS, it allows users to efficiently create, edit, and delete projects and tasks. The app streamlines workflow management, providing a comprehensive solution for project oversight and task organization",
+       link:"https://github.com/KashishSantuka/Taskify"
       },
 ];
 
@@ -39,6 +46,10 @@ const Single = ({ item }) => {
 
       const y = useTransform(scrollYProgress, [0,1], [-300, 300]);
 
+      const handleSelectorFunction = (link) => {
+        window.open(link, '_blank');
+    }
+
 
   return (
     <section >
@@ -50,8 +61,8 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
-          </motion.div>
+            <button onClick={() => handleSelectorFunction(item.link)}>See Demo</button>
+            </motion.div>
         </div>
       </div>
     </section>
