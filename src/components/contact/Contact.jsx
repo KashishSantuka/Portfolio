@@ -52,16 +52,16 @@ export default function Contact() {
         <motion.h1 variants={variants}>Let's Work Together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>hello@gmail.com</span>
+          <span>kashusantuka11@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
-          <span>State Your Current Location</span>
+          <span>Cuttack,Odisha</span>
         </motion.div>
-        <motion.div className="item" variants={variants}>
+        {/* <motion.div className="item" variants={variants}>
           <h2>PhoneNo</h2>
           <span>+1 234 5678</span>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
       <div className="formContainer">
         <form ref={formRef} onSubmit={sendEmail}>
