@@ -68,12 +68,12 @@ export default function HomePage() {
           <motion.h1 variants={textVariants}>
             Web Developer And UI DESIGNER
           </motion.h1>
-          <div variants={textVariants} className="buttons">
-            <button onClick={handleResumeClick}>Resume</button>
+          <motion.div variants={textVariants} className="buttons">
+            <motion.button  variants={textVariants} onClick={handleResumeClick}>Resume</motion.button>
             <motion.button variants={textVariants} onClick={handleContactClick}>
               Contact Me
             </motion.button>
-          </div>
+          </motion.div>
           <motion.img
             variants={textVariants}
             animate="scrollButton"

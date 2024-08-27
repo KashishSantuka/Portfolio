@@ -1,5 +1,5 @@
 import "./about.scss";
-import KashishLogo from "../../assets/KashishLogo.jpg";
+import KashishLogo from "../../assets/KashishPhoto.jpg";
 
 export default function About() {
     return (
