@@ -8,10 +8,13 @@
   .wrapper {
     max-width: 1366px;
     height: 100%;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto;
+    /* Center horizontally */
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
 
     .textContainer {
       width: 50%;
@@ -19,7 +22,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; /* Center content horizontally */
+      align-items: center;
+      /* Center content horizontally */
       text-align: center;
       gap: 40px;
 
@@ -27,7 +31,8 @@
         height: 80%;
         width: 100%;
         margin: 0 10px;
-        align-items: center; /* Center content horizontally */
+        align-items: center;
+        /* Center content horizontally */
       }
 
       h2 {
@@ -46,9 +51,10 @@
 
       .buttons {
         display: flex;
-        gap: 20px; /* Adjust gap between buttons */
+        gap: 20px;
+        /* Adjust gap between buttons */
         z-index: 10;
-        
+
         button {
           padding: 20px;
           border: 1px solid white;
@@ -74,6 +80,21 @@
       color: #ffffff09;
       width: 50%;
       font-weight: bold;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 10vh; 
+        bottom: 150px;
+        text-align: center;
+
+      }
+
+      @media screen and (max-width: 767px) {
+        text-align: center;
+        font-size: 12vh; 
+        bottom: 150px; 
+        width: 100%;
+      }
     }
+
   }
 }
