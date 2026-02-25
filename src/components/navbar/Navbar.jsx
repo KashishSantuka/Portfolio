@@ -1,7 +1,7 @@
 import "./navbar.scss";
-import GitHubLogo from "../../assets/github.png";
+import GitHubLogo from "../../assets/GitHub.png";
 // import DiscordLogo from "../../assets/DiscordLogo.png";
-import LinkedInLogo from "../../assets/linkedin.png";
+import LinkedInLogo from "../../assets/LinkedIn.png";
 import TwitterLogo from "../../assets/Twitter.png";
 import { motion } from "framer-motion";
 import Sidebar from "../sidebar/Sidebar";
