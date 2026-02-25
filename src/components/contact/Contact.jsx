@@ -1,6 +1,6 @@
 import "./contact.scss";
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const variants = {
@@ -20,14 +20,27 @@ const variants = {
 
 export default function Contact() {
   const formRef = useRef();
-  const [error, setError] = useState(false);
+  const [form, setForm] = useState({
+  name: "",
+  email: "",
+  message: "",
+});
+  const [error, setError] = useState();
   const [success, setSuccess] = useState(false);
 
+  useEffect(() => {
+    console.log(formRef.current)
+//     console.log(formRef.current[0].value);
+// console.log(formRef.current[1].value);
+// console.log(formRef.current[2].value);
+  }, [formRef.current])
+
+  
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_fxbqske", "template_d3d5zgl", formRef.current, {
+      .sendForm("service_fxbqske", "template_4tbr02r", formRef.current, {
         publicKey: "vfWCLb3dG3-y2-5T8",
       })
       .then(
@@ -35,8 +48,8 @@ export default function Contact() {
           setSuccess(true);
         },
         (error) => {
-          setError(true);
-          console.log(error);
+          setError(error);
+          console.log("Hi, I am the error",error);
         }
       );
   };
@@ -69,7 +82,7 @@ export default function Contact() {
           <input type="email" required placeholder="Email" name="email" />
           <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
-          {error && "Error"}
+          {error}
           {success && "Success"}
         </form>
       </div>

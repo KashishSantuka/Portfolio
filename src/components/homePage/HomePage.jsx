@@ -39,10 +39,18 @@ const textVariants = {
 //         },
 //     },
 // };
+// const handleResumeClick = () => {
+//   console.log(handleResumeClick);
+//   window.open(
+//     "https://drive.google.com/file/d/1GNYfhYwUuMnc3YzMRvqPGFfJFvgT2Qg2/view?usp=sharing",
+//     "_blank"
+//   );
+// };
+
 const handleResumeClick = () => {
   console.log(handleResumeClick);
   window.open(
-    "https://drive.google.com/file/d/1GNYfhYwUuMnc3YzMRvqPGFfJFvgT2Qg2/view?usp=sharing",
+    "https://drive.google.com/file/d/1zO3q2EmSOn0SNFmIYnyC7yrpo2LrZqV2/view?usp=drive_link",
     "_blank"
   );
 };
@@ -66,7 +74,7 @@ export default function HomePage() {
         >
           <motion.h2 variants={textVariants}>KASHISH SANTUKA</motion.h2>
           <motion.h1 variants={textVariants}>
-            Web Developer And UI DESIGNER
+            Full Stack & Agentic AI Developer
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button  variants={textVariants} onClick={handleResumeClick}>Resume</motion.button>

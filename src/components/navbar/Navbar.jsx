@@ -1,7 +1,7 @@
 import "./navbar.scss";
-import GitHubLogo from "../../assets/GitHub.png";
-import DiscordLogo from "../../assets/DiscordLogo.png";
-import LinkedInLogo from "../../assets/LinkedIn.png";
+import GitHubLogo from "../../assets/github.png";
+// import DiscordLogo from "../../assets/DiscordLogo.png";
+import LinkedInLogo from "../../assets/linkedin.png";
 import TwitterLogo from "../../assets/Twitter.png";
 import { motion } from "framer-motion";
 import Sidebar from "../sidebar/Sidebar";
@@ -25,13 +25,13 @@ export default function Navbar() {
           <a href="https://github.com/KashishSantuka">
             <img src={GitHubLogo} alt="" />
           </a>
-          <a href="https://linkedin.com/in/kashish-santuka">
+          <a href="https://linkedin.com/in/kashishsantuka">
             <img src={LinkedInLogo} alt="" />
           </a>
          
-          <a href="https://discordapp.com/users/.759478326137585720">
+          {/* <a href="https://discordapp.com/users/.759478326137585720">
             <img src={DiscordLogo} alt="" />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

@@ -1,15 +1,247 @@
+// @import "../../app.scss";
+
+// #services {
+//   background: linear-gradient(180deg, #0c0c1d, #111132);
+//   color: #fff;
+//   padding: 4rem 0;
+
+//   // @include mobile{
+//   //   display: flex;
+//   //   flex-direction: column;
+//   //   width: 100;
+//   // }
+
+//   .services_wrapper {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     padding: 0 1rem;
+
+//     @include mobile {
+//       display: flex;
+//       flex-direction: column;
+//       width: 100;
+//       margin-top: 0;
+//     }
+//   }
+
+//   .section_header {
+//     text-align: center;
+//     margin-bottom: 3rem;
+//     margin-top: 3rem;
+
+//     @include mobile{
+//       margin-top: 2px;;
+//     }
+
+//     h2 {
+//       font-size: 3rem;
+//       color: #a080ff;
+//       margin-bottom: 1rem;
+//     }
+
+//     .description {
+//       font-size: 1rem;
+//       color: #aaa;
+//       max-width: 600px;
+//       margin: 0 auto;
+//     }
+//   }
+
+//   .service_group {
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 2rem;
+   
+
+//     @include mobile {
+//       display: flex;
+//       flex-direction: column;
+//       width: 100%;
+//     }
+//   }
+
+//   .services {
+//     background-color: #111;
+//     border-radius: 10px;
+//     padding: 2rem;
+//     // margin-top:auto;
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+
+//     &:nth-child(1) {
+//       border-top: 2px solid #a080ff;
+//     }
+//     &:nth-child(2) {
+//       border-top: 2px solid #40ff80;
+//     }
+//     &:nth-child(3) {
+//       border-top: 2px solid #a080ff;
+//     }
+
+//     @include mobile {
+//       // flex-direction: column;
+//       // width: 100%;
+//       // border-radius: 3px;
+//       // padding: 0px;
+//       max-width: 600px;
+//       max-height: 100px;
+//     }
+//   }
+
+//   .service_top {
+//     display: flex;
+//     align-items: center;
+//     margin-bottom: 1.5rem;
+//     padding: 1rem;
+//     background-color: rgba(0, 0, 0, 0.3);
+//     border-radius: 10px;
+
+//     .icon_container {
+//       width: 60px;
+//       height: 60px;
+//       border-radius: 50%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       margin-right: 1rem;
+//       box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+
+//       img {
+//         width: 30px;
+//         height: 30px;
+//         object-fit: contain;
+//       }
+//     }
+
+//     .title {
+//       font-size: 2rem;
+//       font-weight: bold;
+//       margin-left: 0.5rem;
+//     }
+//   }
+
+//   .service_middle {
+//     flex-grow: 1;
+
+//     .description {
+//       color: #aaa;
+//       font-size: 0.9rem;
+//       line-height: 1.5;
+//     }
+
+//     .skills-list {
+//       display: grid;
+//       grid-template-columns: repeat(2, 1fr);
+//       gap: 0.75rem;
+//       margin-top: 1.5rem;
+
+//       .skill-item {
+//         display: flex;
+//         align-items: center;
+
+//         .check-icon {
+//           margin-left: 0.25rem;
+//           color: #8340ff;
+//           margin-right: 3px;
+
+//           @include mobile{
+//             display: none;
+//           }
+        
+//         }
+
+//         .skill-icon {
+//           color: rebeccapurple;
+//           font-size: 1rem;
+//           margin-right: 0.5rem;
+//         }
+
+//         .skill_info {
+//           display: flex;
+//           align-items: center;
+//           justify-content: space-between;
+//           width: 100%;
+
+           
+//           @include mobile{
+//             display: none;
+//           }
+        
+
+//           .skill_name {
+//             font-size: 0.9rem;
+//             font-weight: bold;
+//             // margin: 0;
+//             color: rebeccapurple;
+//             margin-right: 3px;
+//           }
+
+//           .skill_level {
+//             font-size: 0.8rem;
+//             color: #aaa;
+
+          
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .service_bottom {
+//     margin-top: 1rem;
+
+//     .btn {
+//       background-color: transparent;
+//       border: 1px solid #fff;
+//       color: #fff;
+//       padding: 0.5rem 1rem;
+//       border-radius: 5px;
+//       cursor: pointer;
+//       transition: all 0.3s ease;
+
+//       &:hover {
+//         background-color: #fff;
+//         color: #000;
+//       }
+//     }
+//   }
+// }
+
+// // Color variations for each service
+// .services:nth-child(1) {
+//   .icon_container {
+//     background-color: rgba(128, 0, 128, 0.2);
+//   }
+//   .title {
+//     color: #b980ff;
+//   }
+// }
+
+// .services:nth-child(2) {
+//   .icon_container {
+//     background-color: rgba(0, 255, 0, 0.2);
+//   }
+//   .title {
+//     color: #40ff80;
+//   }
+// }
+
+// .services:nth-child(3) {
+//   .icon_container {
+//     background-color: rgba(128, 0, 128, 0.2);
+//   }
+//   .title {
+//     color: #b980ff;
+//   }
+// }
+
 @import "../../app.scss";
 
 #services {
   background: linear-gradient(180deg, #0c0c1d, #111132);
   color: #fff;
   padding: 4rem 0;
-
-  // @include mobile{
-  //   display: flex;
-  //   flex-direction: column;
-  //   width: 100;
-  // }
 
   .services_wrapper {
     max-width: 1200px;
@@ -19,18 +251,16 @@
     @include mobile {
       display: flex;
       flex-direction: column;
-      width: 100;
       margin-top: 0;
     }
   }
 
   .section_header {
     text-align: center;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
+    margin: 3rem 0;
 
-    @include mobile{
-      margin-top: 2px;;
+    @include mobile {
+      margin-top: 0.5rem;
     }
 
     h2 {
@@ -47,48 +277,43 @@
     }
   }
 
-  .service_group {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-   
+  /* 🔥 Dynamic Grid Layout */
+.service_group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // force one line
+  gap: 2rem;
+  justify-content: center; 
 
-    @include mobile {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
+
+  @include mobile {
+    grid-template-columns: 1fr;
   }
+}
 
+  /* 🔥 Service Card */
   .services {
+    --accent: #a080ff;
+
     background-color: #111;
     border-radius: 10px;
     padding: 2rem;
-    // margin-top:auto;
-    flex: 1;
+    border-top: 2px solid var(--accent);
+
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    &:nth-child(1) {
-      border-top: 2px solid #a080ff;
-    }
-    &:nth-child(2) {
-      border-top: 2px solid #40ff80;
-    }
-    &:nth-child(3) {
-      border-top: 2px solid #a080ff;
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     }
 
     @include mobile {
-      // flex-direction: column;
-      // width: 100%;
-      // border-radius: 3px;
-      // padding: 0px;
-      max-width: 600px;
-      max-height: 100px;
+      padding: 1.5rem;
     }
   }
 
+  /* 🔹 Top Section */
   .service_top {
     display: flex;
     align-items: center;
@@ -105,6 +330,7 @@
       justify-content: center;
       align-items: center;
       margin-right: 1rem;
+      background-color: color-mix(in srgb, var(--accent) 20%, transparent);
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 
       img {
@@ -117,10 +343,11 @@
     .title {
       font-size: 2rem;
       font-weight: bold;
-      margin-left: 0.5rem;
+      color: var(--accent);
     }
   }
 
+  /* 🔹 Middle Section */
   .service_middle {
     flex-grow: 1;
 
@@ -136,102 +363,70 @@
       gap: 0.75rem;
       margin-top: 1.5rem;
 
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+
       .skill-item {
         display: flex;
         align-items: center;
 
         .check-icon {
-          margin-left: 0.25rem;
-          color: #8340ff;
-          margin-right: 3px;
+          color: var(--accent);
+          margin-right: 0.4rem;
 
-          @include mobile{
+          @include mobile {
             display: none;
           }
-        
         }
 
         .skill-icon {
-          color: rebeccapurple;
+          color: var(--accent);
           font-size: 1rem;
           margin-right: 0.5rem;
         }
 
         .skill_info {
           display: flex;
-          align-items: center;
           justify-content: space-between;
           width: 100%;
 
-           
-          @include mobile{
+          @include mobile {
             display: none;
           }
-        
 
           .skill_name {
             font-size: 0.9rem;
             font-weight: bold;
-            // margin: 0;
-            color: rebeccapurple;
-            margin-right: 3px;
+            color: var(--accent);
           }
 
           .skill_level {
             font-size: 0.8rem;
             color: #aaa;
-
-          
           }
         }
       }
     }
   }
 
+  /* 🔹 Bottom Section */
   .service_bottom {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 
     .btn {
       background-color: transparent;
-      border: 1px solid #fff;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
       cursor: pointer;
       transition: all 0.3s ease;
 
       &:hover {
-        background-color: #fff;
+        background-color: var(--accent);
         color: #000;
       }
     }
-  }
-}
-
-// Color variations for each service
-.services:nth-child(1) {
-  .icon_container {
-    background-color: rgba(128, 0, 128, 0.2);
-  }
-  .title {
-    color: #b980ff;
-  }
-}
-
-.services:nth-child(2) {
-  .icon_container {
-    background-color: rgba(0, 255, 0, 0.2);
-  }
-  .title {
-    color: #40ff80;
-  }
-}
-
-.services:nth-child(3) {
-  .icon_container {
-    background-color: rgba(128, 0, 128, 0.2);
-  }
-  .title {
-    color: #b980ff;
   }
 }

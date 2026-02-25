@@ -2,9 +2,11 @@ import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import taskifyLogo from "../../assets/Taskify.png";
-import QuizLogo from "../../assets/quizphoto.jpg";
+// import QuizLogo from "../../assets/quizphoto.jpg";
 import MovieLogo from "../../assets/MovieLogo.png";
 import UrlImage from "../../assets/UrlLogo.jpg";
+import Logo from "../../assets/Logo.png";
+
 
 const items = [
     {
@@ -14,14 +16,7 @@ const items = [
         desc: "A URL shortener application was developed using MongoDB, Express, Node.js, and JavaScript. This application allows users to input a valid URL and receive a shortened URL in return. It features a carefully designed model schema that efficiently stores short IDs, original URLs, and visit history. The application dynamically generates shortened URLs and redirects users to the original URLs. Additionally, it tracks and displays the visit history for each shortened URL, allowing for the monitoring of total visits or clicks on each URL.",
         link:"https://github.com/KashishSantuka/url-shortner"
       },
-      {
-        id: 2,
-        title: "Brain Buzz",
-        img: QuizLogo,
-        desc: "This React-based quiz app combines dynamic functionality with a responsive CSS design. It features timed questions, shuffled answers, and real-time feedback. Leveraging React Hooks and custom JavaScript, the app ensures efficient state management and smooth performance. With accessibility features and customizable themes, it offers an engaging, inclusive experience across devices.",
-         link:"https://github.com/KashishSantuka/BrainBuzz"
-      },
-      {
+       {
         id: 3,
         title: "Movie Search",
         img: MovieLogo,
@@ -29,6 +24,13 @@ const items = [
        link:"https://github.com/KashishSantuka/search-movies"
       },
       {
+        id: 2,
+        title: "Synthify",
+        img: Logo,
+        desc: "Developed an AI-powered SaaS platform with features like conversation, image, audio, and coding pages. Built andintegrated custom APIs to enhance the platform’s AI capabilities. Deployed the platform on Render to ensure a seamless userexperience.",
+         link:"https://synthify.onrender.com/"
+      },
+     {
         id: 4,
         title: "Taskify",
         img: taskifyLogo,

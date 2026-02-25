@@ -17,7 +17,7 @@ export default function Article({ title, skills, image }) {
               <FaCheckCircle className="check-icon" />
               <div className="skill_info">
                 <p className="skill_name">{skill.name}</p>
-                <p className="skill_level">{skill.level}</p>
+                {/* <p className="skill_level">{skill.level}</p> */}
               </div>
             </div>
           ))}
