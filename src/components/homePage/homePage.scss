@@ -1,3 +1,6 @@
+// 
+
+
 @import "../../app.scss";
 
 .homePage {
@@ -9,12 +12,15 @@
     max-width: 1366px;
     height: 100%;
     margin: 0 auto;
-    /* Center horizontally */
     display: flex;
     justify-content: center;
-    /* Center horizontally */
     align-items: center;
-    /* Center vertically */
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 16px;
+    }
 
     .textContainer {
       width: 50%;
@@ -23,37 +29,60 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      /* Center content horizontally */
       text-align: center;
       gap: 40px;
 
+      @media screen and (max-width: 1024px) {
+        gap: 24px;
+        width: 70%;
+      }
+
       @include mobile {
-        height: 80%;
+        height: auto;
         width: 100%;
-        margin: 0 10px;
-        align-items: center;
-        /* Center content horizontally */
+        gap: 16px;
+        padding: 20px 0;
       }
 
       h2 {
         font-size: 30px;
         color: rebeccapurple;
         letter-spacing: 10px;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 22px;
+          letter-spacing: 6px;
+        }
+
+        @include mobile {
+          font-size: 14px;
+          letter-spacing: 4px;
+        }
       }
 
       h1 {
         font-size: 70px;
+        line-height: 1.1;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 50px;
+        }
 
         @include mobile {
-          font-size: 20px;
+          font-size: 32px;
         }
       }
 
       .buttons {
         display: flex;
         gap: 20px;
-        /* Adjust gap between buttons */
         z-index: 10;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include mobile {
+          gap: 10px;
+        }
 
         button {
           padding: 20px;
@@ -63,11 +92,35 @@
           color: white;
           cursor: pointer;
           font-weight: 300;
+          transition: background-color 0.2s ease;
+
+          @media screen and (max-width: 1024px) {
+            padding: 14px 18px;
+            font-size: 14px;
+          }
+
+          @include mobile {
+            padding: 10px 14px;
+            font-size: 12px;
+            border-radius: 8px;
+          }
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+          }
         }
       }
 
       img {
         width: 50px;
+
+        @media screen and (max-width: 1024px) {
+          width: 38px;
+        }
+
+        @include mobile {
+          width: 28px;
+        }
       }
     }
 
@@ -82,19 +135,18 @@
       font-weight: bold;
 
       @media screen and (max-width: 1024px) {
-        font-size: 10vh; 
-        bottom: 150px;
+        font-size: 10vh;
+        bottom: 100px;
         text-align: center;
-
+        width: 100%;
       }
 
       @media screen and (max-width: 767px) {
         text-align: center;
-        font-size: 12vh; 
-        bottom: 150px; 
+        font-size: 10vh;
+        bottom: 80px;
         width: 100%;
       }
     }
-
   }
 }

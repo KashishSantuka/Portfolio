@@ -1,3 +1,5 @@
+// 
+
 @import "../../app.scss";
 
 .navbar {
@@ -12,7 +14,7 @@
     height: 100%;
 
     @include mobile {
-      width: 80%;
+      width: 90%;
       margin: auto;
       display: flex;
       align-items: center;
@@ -25,8 +27,9 @@
       margin-left: 10px;
 
       @include mobile {
-        justify-content: flex-end;
-        padding: 20px;
+        font-size: 13px;
+        margin-left: 0;
+        letter-spacing: 0.03em;
       }
     }
 
@@ -35,18 +38,23 @@
       gap: 20px;
 
       @include mobile {
-        margin-left: 5%;
+        gap: 12px;
+        margin-left: 0;
       }
 
       img {
         width: 25px;
         height: 25px;
+
+        @include mobile {
+          width: 18px;
+          height: 18px;
+        }
       }
     }
   }
 
-  @media screen and (max-width: 767px) {
-    // You can adjust the max-width value as needed
-    display: none;
+  @include mobile {
+    height: 60px;
   }
 }

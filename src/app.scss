@@ -1,3 +1,71 @@
+// html {
+//   scroll-snap-type: y mandatory;
+//   scroll-behavior: smooth;
+// }
+
+// * {
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+//   font-family: "DM Sans", sans-serif;
+// }
+
+// body {
+//   background-color: #0c0c1d;
+//   color: lightgray;
+// }
+
+// a {
+//   text-decoration: none;
+//   color: inherit;
+// }
+
+// section {
+//   height: 100vh;
+//   width: 100vw;
+//   scroll-snap-align: center;
+//   overflow: hidden;
+// }
+
+// @mixin mobile {
+//   @media (max-width: 738px) {
+//     @content;
+//   }
+// }
+// @mixin tablet {
+//   @media (max-width: 1024px) {
+//     @content;
+//   }
+// }
+// @mixin desktop {
+//   @media (max-width: 1366px) {
+//     @content;
+//   }
+// }
+
+
+/* ─── Mixins must be defined FIRST ─── */
+
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+
+/* ─── Global reset & base styles ─── */
+
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -25,20 +93,65 @@ section {
   width: 100vw;
   scroll-snap-align: center;
   overflow: hidden;
+
+  @include mobile {
+    height: auto;
+    min-height: 100vh;
+    scroll-snap-align: start;
+  }
 }
 
-@mixin mobile {
-  @media (max-width: 738px) {
-    @content;
+/* ─── Global responsive typography & spacing ─── */
+
+@media (max-width: 738px) {
+  html {
+    font-size: 14px;
+    scroll-snap-type: y proximity;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: clamp(24px, 8vw, 48px);
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-size: clamp(16px, 5vw, 28px);
+    letter-spacing: 0.05em;
+  }
+
+  h3 {
+    font-size: clamp(14px, 4vw, 22px);
+  }
+
+  p {
+    font-size: clamp(12px, 3.5vw, 16px);
+    line-height: 1.6;
+  }
+
+  button, a {
+    font-size: clamp(11px, 3vw, 14px);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
-@mixin tablet {
-  @media (max-width: 1024px) {
-    @content;
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
   }
-}
-@mixin desktop {
-  @media (max-width: 1366px) {
-    @content;
+
+  h1 {
+    font-size: clamp(32px, 5vw, 60px);
+  }
+
+  h2 {
+    font-size: clamp(20px, 3vw, 32px);
   }
 }

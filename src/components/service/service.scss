@@ -236,37 +236,239 @@
 //   }
 // }
 
+// @import "../../app.scss";
+
+// #services {
+//   background: linear-gradient(180deg, #0c0c1d, #111132);
+//   color: #fff;
+//   padding: 4rem 0;
+
+//   .services_wrapper {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     padding: 0 1rem;
+
+//     @include mobile {
+//       display: flex;
+//       flex-direction: column;
+//       margin-top: 0;
+//     }
+//   }
+
+//   .section_header {
+//     text-align: center;
+//     margin: 3rem 0;
+
+//     @include mobile {
+//       margin-top: 0.5rem;
+//     }
+
+//     h2 {
+//       font-size: 3rem;
+//       color: #a080ff;
+//       margin-bottom: 1rem;
+//     }
+
+//     .description {
+//       font-size: 1rem;
+//       color: #aaa;
+//       max-width: 600px;
+//       margin: 0 auto;
+//     }
+//   }
+
+//   /* 🔥 Dynamic Grid Layout */
+// .service_group {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr); // force one line
+//   gap: 2rem;
+//   justify-content: center; 
+
+
+//   @include mobile {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+//   /* 🔥 Service Card */
+//   .services {
+//     --accent: #a080ff;
+
+//     background-color: #111;
+//     border-radius: 10px;
+//     padding: 2rem;
+//     border-top: 2px solid var(--accent);
+
+//     display: flex;
+//     flex-direction: column;
+//     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+//     &:hover {
+//       transform: translateY(-6px);
+//       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+//     }
+
+//     @include mobile {
+//       padding: 1.5rem;
+//     }
+//   }
+
+//   /* 🔹 Top Section */
+//   .service_top {
+//     display: flex;
+//     align-items: center;
+//     margin-bottom: 1.5rem;
+//     padding: 1rem;
+//     background-color: rgba(0, 0, 0, 0.3);
+//     border-radius: 10px;
+
+//     .icon_container {
+//       width: 60px;
+//       height: 60px;
+//       border-radius: 50%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       margin-right: 1rem;
+//       background-color: color-mix(in srgb, var(--accent) 20%, transparent);
+//       box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+
+//       img {
+//         width: 30px;
+//         height: 30px;
+//         object-fit: contain;
+//       }
+//     }
+
+//     .title {
+//       font-size: 2rem;
+//       font-weight: bold;
+//       color: var(--accent);
+//     }
+//   }
+
+//   /* 🔹 Middle Section */
+//   .service_middle {
+//     flex-grow: 1;
+
+//     .description {
+//       color: #aaa;
+//       font-size: 0.9rem;
+//       line-height: 1.5;
+//     }
+
+//     .skills-list {
+//       display: grid;
+//       grid-template-columns: repeat(2, 1fr);
+//       gap: 0.75rem;
+//       margin-top: 1.5rem;
+
+//       @include mobile {
+//         grid-template-columns: 1fr;
+//       }
+
+//       .skill-item {
+//         display: flex;
+//         align-items: center;
+
+//         .check-icon {
+//           color: var(--accent);
+//           margin-right: 0.4rem;
+
+//           @include mobile {
+//             display: none;
+//           }
+//         }
+
+//         .skill-icon {
+//           color: var(--accent);
+//           font-size: 1rem;
+//           margin-right: 0.5rem;
+//         }
+
+//         .skill_info {
+//           display: flex;
+//           justify-content: space-between;
+//           width: 100%;
+
+//           @include mobile {
+//             display: none;
+//           }
+
+//           .skill_name {
+//             font-size: 0.9rem;
+//             font-weight: bold;
+//             color: var(--accent);
+//           }
+
+//           .skill_level {
+//             font-size: 0.8rem;
+//             color: #aaa;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   /* 🔹 Bottom Section */
+//   .service_bottom {
+//     margin-top: 1.5rem;
+
+//     .btn {
+//       background-color: transparent;
+//       border: 1px solid var(--accent);
+//       color: var(--accent);
+//       padding: 0.5rem 1.2rem;
+//       border-radius: 6px;
+//       cursor: pointer;
+//       transition: all 0.3s ease;
+
+//       &:hover {
+//         background-color: var(--accent);
+//         color: #000;
+//       }
+//     }
+//   }
+// }
+
+
 @import "../../app.scss";
 
 #services {
   background: linear-gradient(180deg, #0c0c1d, #111132);
   color: #fff;
   padding: 4rem 0;
+  height: auto;
+  min-height: 100vh;
+
+  @include mobile {
+    padding: 2rem 0;
+  }
 
   .services_wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-
-    @include mobile {
-      display: flex;
-      flex-direction: column;
-      margin-top: 0;
-    }
   }
 
   .section_header {
     text-align: center;
-    margin: 3rem 0;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
 
     @include mobile {
-      margin-top: 0.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     h2 {
       font-size: 3rem;
       color: #a080ff;
       margin-bottom: 1rem;
+
+      @include mobile {
+        font-size: 1.8rem;
+      }
     }
 
     .description {
@@ -274,46 +476,50 @@
       color: #aaa;
       max-width: 600px;
       margin: 0 auto;
+
+      @include mobile {
+        font-size: 0.85rem;
+      }
     }
   }
 
-  /* 🔥 Dynamic Grid Layout */
-.service_group {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); // force one line
-  gap: 2rem;
-  justify-content: center; 
+  /* ── Dynamic grid: auto-fills columns based on how many boxes exist ── */
+  .service_group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
 
-  @include mobile {
-    grid-template-columns: 1fr;
+    @include tablet {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
   }
-}
 
-  /* 🔥 Service Card */
   .services {
-    --accent: #a080ff;
-
     background-color: #111;
     border-radius: 10px;
     padding: 2rem;
-    border-top: 2px solid var(--accent);
-
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    &:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    }
+    &:nth-child(1) { border-top: 2px solid #a080ff; }
+    &:nth-child(2) { border-top: 2px solid #40ff80; }
+    &:nth-child(3) { border-top: 2px solid #a080ff; }
+    &:nth-child(4) { border-top: 2px solid #40ff80; }
+    &:nth-child(5) { border-top: 2px solid #a080ff; }
+    &:nth-child(6) { border-top: 2px solid #40ff80; }
 
     @include mobile {
-      padding: 1.5rem;
+      padding: 1.2rem;
+      border-radius: 8px;
     }
   }
 
-  /* 🔹 Top Section */
   .service_top {
     display: flex;
     align-items: center;
@@ -321,6 +527,11 @@
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+
+    @include mobile {
+      padding: 0.6rem;
+      margin-bottom: 0.8rem;
+    }
 
     .icon_container {
       width: 60px;
@@ -330,24 +541,39 @@
       justify-content: center;
       align-items: center;
       margin-right: 1rem;
-      background-color: color-mix(in srgb, var(--accent) 20%, transparent);
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      flex-shrink: 0;
+
+      @include mobile {
+        width: 40px;
+        height: 40px;
+        margin-right: 0.6rem;
+      }
 
       img {
         width: 30px;
         height: 30px;
         object-fit: contain;
+
+        @include mobile {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
 
     .title {
       font-size: 2rem;
       font-weight: bold;
-      color: var(--accent);
+      margin-left: 0.5rem;
+
+      @include mobile {
+        font-size: 1.2rem;
+        margin-left: 0.2rem;
+      }
     }
   }
 
-  /* 🔹 Middle Section */
   .service_middle {
     flex-grow: 1;
 
@@ -355,6 +581,10 @@
       color: #aaa;
       font-size: 0.9rem;
       line-height: 1.5;
+
+      @include mobile {
+        font-size: 0.8rem;
+      }
     }
 
     .skills-list {
@@ -364,7 +594,8 @@
       margin-top: 1.5rem;
 
       @include mobile {
-        grid-template-columns: 1fr;
+        gap: 0.4rem;
+        margin-top: 0.8rem;
       }
 
       .skill-item {
@@ -372,8 +603,9 @@
         align-items: center;
 
         .check-icon {
-          color: var(--accent);
-          margin-right: 0.4rem;
+          margin-left: 0.25rem;
+          color: #8340ff;
+          margin-right: 3px;
 
           @include mobile {
             display: none;
@@ -381,13 +613,14 @@
         }
 
         .skill-icon {
-          color: var(--accent);
+          color: rebeccapurple;
           font-size: 1rem;
           margin-right: 0.5rem;
         }
 
         .skill_info {
           display: flex;
+          align-items: center;
           justify-content: space-between;
           width: 100%;
 
@@ -398,7 +631,8 @@
           .skill_name {
             font-size: 0.9rem;
             font-weight: bold;
-            color: var(--accent);
+            color: rebeccapurple;
+            margin-right: 3px;
           }
 
           .skill_level {
@@ -410,23 +644,36 @@
     }
   }
 
-  /* 🔹 Bottom Section */
   .service_bottom {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+
+    @include mobile {
+      margin-top: 0.8rem;
+    }
 
     .btn {
       background-color: transparent;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      padding: 0.5rem 1.2rem;
-      border-radius: 6px;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
       cursor: pointer;
       transition: all 0.3s ease;
+      font-size: 0.9rem;
+
+      @include mobile {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+      }
 
       &:hover {
-        background-color: var(--accent);
+        background-color: #fff;
         color: #000;
       }
     }
   }
 }
+
+/* ── Color variations (extend as you add more boxes) ── */
+.services:nth-child(odd)  { .icon_container { background-color: rgba(128, 0, 128, 0.2); } .title { color: #b980ff; } }
+.services:nth-child(even) { .icon_container { background-color: rgba(0, 255, 0,   0.2); } .title { color: #40ff80; } }
