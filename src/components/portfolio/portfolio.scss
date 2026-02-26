@@ -5,36 +5,69 @@
 .portfolio {
   position: relative;
 
+  // .progress {
+  //   position: sticky;
+  //   top: 0;
+  //   left: 0;
+  //   padding-top: 50px;
+  //   text-align: center;
+  //   color: orange;
+  //   font-size: 36px;
+  //   background: linear-gradient(180deg, #0c0c1d, #111132);
+  //   z-index: 10;
+  //   padding-bottom: 10px;
+
+  //   @include mobile {
+  //     padding-top: 20px;
+  //     padding-bottom: 8px;
+  //     font-size: 20px;
+  //   }
+
+  //   .progressBar {
+  //     height: 10px;
+  //     background-color: white;
+
+  //     @include mobile {
+  //       height: 2px;
+  //       background-color: white;
+  //       margin-top: 8px;
+  //       margin-bottom: 0;
+  //     }
+  //   }
+  // }
+
+
   .progress {
-    position: sticky;
-    top: 0;
-    left: 0;
-    padding-top: 50px;
-    text-align: center;
-    color: orange;
-    font-size: 36px;
-    background: linear-gradient(180deg, #0c0c1d, #111132);
-    z-index: 10;
-    padding-bottom: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  text-align: center;
+  color: orange;
+  font-size: 36px;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  z-index: 10;
+  padding-bottom: 10px;
+
+  @include mobile {
+    padding-top: 50px; // ← changed from 20px to 80px (clears the ~75px fixed button)
+    padding-bottom: 8px;
+    margin-left: 5px;
+    font-size: 15px;
+  }
+
+  .progressBar {
+    height: 10px;
+    background-color: white;
 
     @include mobile {
-      padding-top: 20px;
-      padding-bottom: 8px;
-      font-size: 20px;
-    }
-
-    .progressBar {
-      height: 10px;
+      height: 2px;
       background-color: white;
-
-      @include mobile {
-        height: 2px;
-        background-color: white;
-        margin-top: 8px;
-        margin-bottom: 0;
-      }
+      margin-top: 8px;
+      margin-bottom: 0;
     }
   }
+}
 
   .container {
     display: flex;
@@ -44,6 +77,10 @@
     height: 100%;
     overflow: hidden;
     margin-top: 5px;
+
+     @include mobile {
+    margin-top: 90px; // ← smaller gap on phone
+  }
 
     .wrapper {
       max-width: 1366px;
@@ -74,11 +111,14 @@
           max-height: 220px;
           aspect-ratio: 1 / 1;
           margin: 0 auto;
+          // padding-top: 10px;
         }
 
         img {
           width: 100%;
+
           height: 100%;
+          padding-top: 30px;
           object-fit: cover;
         }
       }

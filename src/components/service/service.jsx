@@ -1,10 +1,10 @@
 import Article from "./Article.jsx";
 import "./service.scss";
-import BrushLogo from "../../assets/PaintBrush.png"; 
+// import BrushLogo from "../../assets/PaintBrush.png"; 
 import FrontEndLogo from "../../assets/frontImage.png";
 import BackEndLogo from "../../assets/BackEndLogo.png";
 import aiAgentLogi from "../../assets/ai-agent.png";
-import systemDesign from "../../assets/systemDesign.png";
+// import systemDesign from "../../assets/systemDesign.png";
 
 
 

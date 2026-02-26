@@ -29,11 +29,13 @@ export default function Contact() {
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
-    console.log(formRef.current)
-//     console.log(formRef.current[0].value);
-// console.log(formRef.current[1].value);
-// console.log(formRef.current[2].value);
-  }, [formRef.current])
+    if(success){
+setTimeout(() => {
+    setSuccess(false)
+},4000)
+    }
+      
+  }, [success])
 
   
   const sendEmail = (e) => {
@@ -43,15 +45,20 @@ export default function Contact() {
       .sendForm("service_fxbqske", "template_4tbr02r", formRef.current, {
         publicKey: "vfWCLb3dG3-y2-5T8",
       })
-      .then(
-        (result) => {
-          setSuccess(true);
-        },
-        (error) => {
-          setError(error);
-          console.log("Hi, I am the error",error);
-        }
-      );
+     .then(
+  (result) => {
+    setSuccess(true);
+    formRef.current.reset();
+
+    setTimeout(() => {
+      setSuccess(false);
+    }, 3000); // ← just put it right here
+  },
+  (error) => {
+    setError(error);
+    console.log("Hi, I am the error", error);
+  }
+);
   };
 
   return (
