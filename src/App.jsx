@@ -6,6 +6,8 @@ import About from "./components/about/About";
 import Service from "./components/service/service";
 import Contact from "./components/contact/Contact";
 import Portfolio from "./components/portfolio/Portfolio";
+// import Experience from "./components/Experience/Experience"
+import { Experience } from "./components/Experience/Experience";
 
 
 
@@ -23,8 +25,12 @@ function App() {
       <section id="Services">
         <Service />
       </section>
+      
       <section id="Portfolio">
         <Parallax type="portfolio" />
+      </section>
+      <section id="Experience">
+         <Experience/>
       </section>
       <Portfolio />
       <section id="Contact">

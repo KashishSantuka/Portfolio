@@ -6,9 +6,39 @@ import taskifyLogo from "../../assets/Taskify.png";
 import MovieLogo from "../../assets/MovieLogo.png";
 import UrlImage from "../../assets/UrlLogo.jpg";
 import Logo from "../../assets/Logo.png";
+import RagPipeline from "../../assets/Rag-pipeline.jpg"
+import EDA from "../../assets/Event-driven.png"
 
 
 const items = [
+  {
+        id: 2,
+        title: "Synthify",
+        img: Logo,
+        desc: "Developed an AI-powered SaaS platform with features like conversation, image, audio, and coding pages. Built andintegrated custom APIs to enhance the platform’s AI capabilities. Deployed the platform on Render to ensure a seamless userexperience.",
+         link:"https://synthify.onrender.com/"
+      },
+      {
+        id: 5,
+        title: "Rag Pipeline",
+        img: RagPipeline,
+        desc: "Built a basic **RAG (Retrieval-Augmented Generation)** pipeline using PDF data, where text was extracted and converted into embeddings using SentenceTransformers. These embeddings were stored in ChromaDB for efficient similarity-based retrieval. On user query, relevant chunks were fetched and passed to an LLM to generate contextual responses. This project helped in understanding RAG architecture, vector embeddings, semantic search, and how retrieval improves LLM response accuracy.",
+        link: "https://github.com/KashishSantuka/rag_pipeline_data_load_retriever"
+      },
+      {
+        id: 6,
+        title: "Event Driven Architecture",
+        img:EDA,
+        desc: "This project is a basic implementation of an event-driven microservices architecture where services like Post, Comment, Moderation, and Query communicate asynchronously through an event bus. It follows a flow of Post → Comment → Moderation → Query, ensuring loose coupling and separation of concerns using CQRS. Built with Node.js, Express, and JavaScript, it uses an in-memory event bus for learning purposes without data persistence.",
+        link: "https://github.com/KashishSantuka/event-driven-architecture"
+      },
+      {
+        id: 4,
+        title: "Taskify",
+        img: taskifyLogo,
+        desc: "This ReactJS-based project management application offers robust task and project tracking capabilities. Featuring an intuitive interface built with TailwindCSS, it allows users to efficiently create, edit, and delete projects and tasks. The app streamlines workflow management, providing a comprehensive solution for project oversight and task organization",
+       link:"https://github.com/KashishSantuka/Taskify"
+      },
     {
         id: 1,
         title: "URL Shortner",
@@ -23,20 +53,9 @@ const items = [
         desc: "This web application showcases the top 20 movies ranked by rating. Developed using HTML, CSS, and JavaScript, it features a search functionality allowing users to find movies by name. The app provides a user-friendly interface to explore highly-rated films and quickly locate specific titles within the curated list.",
        link:"https://github.com/KashishSantuka/search-movies"
       },
-      {
-        id: 2,
-        title: "Synthify",
-        img: Logo,
-        desc: "Developed an AI-powered SaaS platform with features like conversation, image, audio, and coding pages. Built andintegrated custom APIs to enhance the platform’s AI capabilities. Deployed the platform on Render to ensure a seamless userexperience.",
-         link:"https://synthify.onrender.com/"
-      },
-     {
-        id: 4,
-        title: "Taskify",
-        img: taskifyLogo,
-        desc: "This ReactJS-based project management application offers robust task and project tracking capabilities. Featuring an intuitive interface built with TailwindCSS, it allows users to efficiently create, edit, and delete projects and tasks. The app streamlines workflow management, providing a comprehensive solution for project oversight and task organization",
-       link:"https://github.com/KashishSantuka/Taskify"
-      },
+      
+      
+     
 ];
 
 const Single = ({ item }) => {

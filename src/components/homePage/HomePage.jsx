@@ -50,7 +50,7 @@ const textVariants = {
 const handleResumeClick = () => {
   console.log(handleResumeClick);
   window.open(
-    "https://drive.google.com/file/d/1zO3q2EmSOn0SNFmIYnyC7yrpo2LrZqV2/view?usp=drive_link",
+    "https://drive.google.com/file/d/1WcsU00jRRDTMiPueFzHMsBwxqD3ckIWs/view?usp=sharing",
     "_blank"
   );
 };
