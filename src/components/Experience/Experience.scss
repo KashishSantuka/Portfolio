@@ -287,3 +287,115 @@ $font-body:    'DM Sans', sans-serif;
     font-size: 13px;
   }
 }
+
+@media (max-width: 738px) {
+  .experience {
+    padding: 30px 0 50px;
+  }
+
+  .experience__container {
+    padding: 0 16px;
+  }
+
+  .experience__watermark {
+    display: none;
+  }
+
+  .experience__label {
+    margin-bottom: 12px;
+  }
+
+  .experience__label-line {
+    width: 24px;
+  }
+
+  .experience__label-text {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .experience__heading {
+    font-size: 18px;
+    letter-spacing: -0.3px;
+    margin: 0 0 16px;
+  }
+
+  .experience__timeline {
+    gap: 16px;
+  }
+
+  .experience__card {
+    padding: 16px 14px;
+    border-radius: 10px;
+  }
+
+  .experience__card-header {
+    margin-bottom: 12px;
+  }
+
+  .experience__card-meta {
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+
+  .experience__company {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .experience__period {
+    font-size: 9px;
+  }
+
+  .experience__role {
+    font-size: 16px;
+    margin: 0 0 10px;
+    letter-spacing: -0.2px;
+  }
+
+  .experience__tech-stack {
+    gap: 5px;
+  }
+
+  .experience__tech-pill {
+    padding: 2px 8px;
+    font-size: 9px;
+  }
+
+  .experience__divider {
+    margin-bottom: 12px;
+  }
+
+  .experience__bullets {
+    gap: 12px;
+  }
+
+  .experience__bullet {
+    gap: 8px;
+  }
+
+  .experience__bullet-dot {
+    width: 4px;
+    height: 4px;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+
+  .experience__bullet-content {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .experience__bullet-highlight {
+    font-size: 12px;
+  }
+
+  .experience__metric {
+    display: block;
+    margin-left: 0;
+    margin-top: 5px;
+    width: fit-content;
+    font-size: 9px;
+    padding: 2px 8px;
+  }
+}
