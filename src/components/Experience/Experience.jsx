@@ -94,10 +94,10 @@ export const Experience = () => {
         </div>
 
         {/* Section heading */}
-        <h2 className="experience__heading">
+        {/* <h2 className="experience__heading">
           Where I've
           <em>built things</em>
-        </h2>
+        </h2> */}
 
         {/* Timeline */}
         <div className="experience__timeline">
